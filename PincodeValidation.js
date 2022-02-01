@@ -1,13 +1,16 @@
-var pincode = prompt('Enter the required 6-digit pincode to be validated: ')
-const pincodeRegex = RegExp('^ [0-9]{6} $')
+var pin = prompt('Enter the required 6-digit pincode to be validated: ')
+const pinRegex = RegExp('^ [0-9]{3}\\s{0,1}[0-9]{3} $')
 
+function validatePincode(pin) {
+    if (pincodeRegex.test(pin)) {
+       console.log('Entered pincode is Valid!!')
+    }
+    else {
+        throw ('Entered pincode is invalid!!')
+    }
+}
 try {
-if (pincodeRegex.test(pincode)) {
-    console.log('Entered pincode is Valid!!')
-}
-else {
-    console.org0('Entered pincode is invalid!!')
-}
+    validatePincode(pin)
 }
 catch (e) {
     console.error(e)
