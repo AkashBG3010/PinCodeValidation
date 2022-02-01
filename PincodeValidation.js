@@ -1,5 +1,5 @@
 var pincode = prompt('Enter the required 6-digit pincode to be validated: ')
-const pincodeRegex = RegExp('^[0-9]{6}$')
+const pincodeRegex = RegExp(' ^ [0-9]{6}$')
 
 try {
 if (pincodeRegex.test(pincode)) {
